@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask News App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <!-- title div  -->
+    <div  class="jumbotron" style="color:black">
+        <h1 style="color:black ;"> Flask News App</h1>
+    </div>
+    <!-- context div -->
+    <div class="container">
+        {% for new, des, i in context %}
+        <img src="{{i}}" alt="img of news">
+        <h3>Title:</h3>{{new}}
+        <!-- <p>publishedAt:</p>{{pub}} -->
+        <h4>Description:</h4> {{des}}
+        <!-- <h5>Content: </h5>{{content}} -->
+        {% endfor %}
+
+    </div>
+    
+</body>
+</html>
